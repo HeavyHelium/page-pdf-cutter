@@ -3,7 +3,7 @@ chop each page (potentially long) of a PDF into specified number of sections per
 
 ## Usage 
 
-### Intall dependencies
+### Install dependencies
 
 ```sh
 pip install -r requirements.txt
