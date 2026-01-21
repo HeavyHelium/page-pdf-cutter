@@ -19,8 +19,8 @@ def crop_large_slide(input_pdf, output_pdf, sections_per_page=2):
         section_height = height / sections_per_page
         for i in range(sections_per_page):
             cropped_page = page
-            cropped_page.mediabox.upper_right = (width, height - i * section_height)
-            cropped_page.mediabox.lower_left = (0, height - (i + 1) * section_height)
+            cropped_page.mediabox.upper_right = (width, height - i * section_height + 65)
+            cropped_page.mediabox.lower_left = (0, height - (i + 1) * section_height + 65)
             writer.add_page(cropped_page)
 
     with open(output_pdf, "wb") as f_out:
